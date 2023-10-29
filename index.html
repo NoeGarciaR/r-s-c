@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
 
     <div id="cp-fac" class="img-advertenciaFac"></div>
@@ -13,9 +15,21 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script>
-      tippy('#cp-fac', {
-        content: '',
-      });
-    </script> 
+        let _cont = `
+        <div class="tooltip-facturacion">
+            <div class="header">
+                <img src="https://cdn-icons-png.flaticon.com/512/5974/5974693.png" alt="">
+                Radio Tips
+            </div>
+            <span>
+                El Código Postal debe ser igual al de tu Contancia de Situación Fiscal
+            </span>
+        </div>`
+        tippy('#cp-fac', {
+            content: _cont,
+            allowHTML: true
+        });
+    </script>
 </body>
+
 </html>
